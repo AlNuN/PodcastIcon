@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --icon-dimensions: 384px;
+    --body-width: 53.32%;
+    --body-height: 71.66%;
+    --body-top: 5.21%;
+    --body-left: 23.34%;
+    --body-face-const: 0.91;
+    --face-width: calc(var(--body-width) * var(--body-face-const));
+    --face-height: calc(var(--body-height) * var(--body-face-const));
+    --face-top: calc(((var(--body-height) - var(--face-height)) / 2) + var(--body-top));
+    --face-left: calc(((var(--body-width) - var(--face-width)) / 2) + var(--body-left));
+    --lines-color: black;
+}
+
+#icon{
+    margin-left: 400px;
+    margin-top: 100px;
+    position: relative;
+    width: var(--icon-dimensions);
+    height: var(--icon-dimensions);
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+#shadow{
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    opacity: .3;
+    width: var(--body-width);
+    height: var(--body-height);
+    top: var(--body-top);
+    left: var(--body-left);
+    filter: blur(calc(var(--icon-dimensions) * 0.05));
+}
+
+#body{
+    position: absolute;
+    width: var(--body-width);
+    height: var(--body-height);
+    border-radius: 50%;
+    background-color: var(--lines-color);
+    top: var(--body-top);
+    left: var(--body-left);
+}
+
+#face{
+    position: absolute;
+    width: var(--face-width);
+    height: var(--face-height);
+    border-radius: 50%;
+    background-color: white;
+    top: var(--face-top);
+    left: var(--face-left);
+}
+
+.eye{
+    position: absolute;
+    width: 8%;
+    height: 20%;
+    border-radius: 20%;
+    background-color: var(--lines-color);
+}
+
+.eye.left{
+    top: 20%;
+    left: 37%;
+}
+
+.eye.right{
+    top: 20%;
+    left: 55%;
+}
+
+#mouth{
+    position: absolute;
+    width: 30%;
+    height: 15%;
+    background-color: var(--lines-color);
+    border-bottom-left-radius: calc(var(--icon-dimensions) * 0.15);
+    border-bottom-right-radius: calc(var(--icon-dimensions) * 0.15);
+    top: 53%;
+    left: 35%;
+}
+
+.strip{
+    position: absolute;
+    width: 8%;
+    height: 5%;
+    border-radius: 20%;
+    background-color: var(--lines-color);
+}
+
+.strip.right-1{
+    top: 33%;
+    left: 22%;
+}
+.strip.right-2{
+    top: 40%;
+    left: 22%;
+}
+
+.strip.right-3{
+    top: 47%;
+    left: 22%;
+}
+
+.strip.left-1{
+    top: 33%;
+    left: 70%;
+}
+
+.strip.left-2{
+    top: 40%;
+    left: 70%;
+}
+
+.strip.left-3{
+    top: 47%;
+    left: 70%;
+}
+
+#handle{
+    position: absolute;
+    width: 8%;
+    height: 15%;
+    border-radius: 20%;
+    background-color: var(--lines-color);
+    top: 76%;
+    left: 45.5%;
+}
+
+#base{
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    border-radius: 20%;
+    background-color: var(--lines-color);
+    top: 90%;
+    left: 34.5%;
+}
+
+
+
+
+
+
